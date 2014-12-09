@@ -1,0 +1,25 @@
+<div id="nav">
+  Quadcopter
+  <ul>
+    <?php
+       $lines = file('navEntries.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+
+       for( $i=0; $i<count($lines); $i+=2) {
+				      echo "\t\t<a href=\"?page=".$lines[$i+1]."\"><li ".isActive($lines[$i+1]).">".$lines[$i]."</li></a>\n";
+}
+
+function isActive($link) {
+ if(isset($_GET["page"])) {
+ 
+  if($link === $_GET["page"]) {
+   return 'class="active"';
+  }
+ } else {
+  if($link === "about.html") {
+   return 'class="active"';
+  }
+ }
+}
+?>
+       </ul>
+</div>

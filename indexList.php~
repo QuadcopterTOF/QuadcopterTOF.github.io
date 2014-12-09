@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+<?php
+function listDir($dir) {
+    $result = array();
+    $handler = opendir($dir);
+
+    while($file = readdir($handler)) {
+        if( !ereg("(^\.|~$)", $file) ){
+            $result[] = $file;
+        }
+    }
+    closedir($handler);
+    return $result;
+}
+
+$regex = "^((.*)\.(.*)|(.*))$";
+echo "<table>\n";
+foreach(listDir(".") as $line) {
+    Preg_match_all("/$regex/siU", $line, $matches, PREG_SET_ORDER);
+    echo "\t<tr>";
+    if($matches[0][3] != "") {
+        echo "\t\t<td><img src=\"icons/".$matches[0][3].".png\"></td><td>".$matches[0][0]."</img></td>";
+    }else{
+        echo "\t\t<td><img src=\"icons/dir.png\"></td><td>".$matches[0][0]."</img></td>";
+    }
+    echo "\t</tr>\n";
+}
+echo "</table>";
+?>
+</body>
+</html>

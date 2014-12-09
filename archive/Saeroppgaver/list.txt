@@ -1,0 +1,7 @@
+Særoppgave2.pdf
+file
+Thorvalds særoppgave om autonome biler
+
+Controller.pdf
+file
+Diagram av en PID-controller

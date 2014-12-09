@@ -1,0 +1,11 @@
+Saeroppgaver
+dir
+Være teknologi-særoppgaver. Obs. oppdateres ikke løpende
+
+test.txt
+file
+Somedescriptio with spaces
+
+DirTest
+dir
+superduper

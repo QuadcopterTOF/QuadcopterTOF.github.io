@@ -1,0 +1,8 @@
+About
+about.html
+
+Handleliste
+shop.html
+
+Archive
+archive.php

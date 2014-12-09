@@ -1,0 +1,222 @@
+body {
+    margin: 0;
+    padding-top: 60px;
+}
+
+/*Navbar
+-----------------------------*/
+#nav {
+    width: 100%;
+    height: 60px;
+    background: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: white;
+    font-size: 30px;
+    display: block;
+    line-height: 30px;
+    padding-left: 20px;
+    z-index: 5;
+}
+
+#nav ul {
+    display: inline-block;
+    font-size: 15px;
+    color: grey;
+}
+
+#nav li {
+    display: inline-block;
+    margin-right: 20px;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 13px;
+    transition: 0.7s;
+}
+
+#nav li:hover {
+    color: lightgrey;
+    border-color: red;
+}
+
+#nav li.active {
+    color: white;
+    border-color: white;
+}
+
+#nav a  {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+/*Karste Box
+-------------------------------------------*/
+.karsteBox {
+    position: fixed; 
+    left: -230px;
+    top: 100px;
+    background: white;
+    height: 154px;
+    width: 250px;
+    padding-right: 20px;
+    color: grey;
+    font-weight: bold;
+    box-shadow: 0 0 10px -2px black;
+    transition: left 0.6s;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.karsteBox:after {
+    border-style: double;
+    content: "";
+    height: 80px;
+    line-height: 108px;
+    position: absolute;
+    right: 7px;
+    top: 34px;
+    width: 0;
+    z-index: 1;
+    background: white;
+}
+
+.karsteBox:hover {
+    left: 0;
+}
+
+.karsteBox ul {
+    padding-left: 15px;
+    display: list-item;
+}
+
+.karsteBox li {
+    list-style: none;
+    line-height: 25px;
+    transition: 0.7s;
+}
+
+.karsteBox li:hover {
+    color: black;
+    transition: 0.4s;
+    transform: translateX(8px);
+}
+
+.karsteBox a {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+/*Content
+-------------------------------------------*/
+
+.wrap {
+    max-width: 100%;
+    min-height: 200px;
+    padding: 10px 60px;
+    text-align: center;
+}
+
+.red {
+    background: #e56e5c;
+    color: white;
+}
+
+.fig {
+    width: 250px;
+    position: relative;
+    height: 145px;
+    overflow: hidden;
+    border: 10px solid white;
+    border-radius: 2px;
+    transition: transform 0.8s;
+    margin: 5px auto 10px;
+    box-shadow: 5px 5px 10px -5px black;
+    z-index: 2;
+}
+
+.fig img {
+    width: 250px;
+}
+
+.fig:hover {
+    transform: scale(3);
+}
+
+/*Crew part
+----------------------------------------------*/
+
+.crew {
+    width: 100%;
+    text-align: center;
+    z-index: 0;
+    position: relative;
+    padding: 0;
+}
+
+.crew ul {
+    padding: 0;
+    margin-top: 30px;
+}
+
+.crew .face {
+    display: inline-block;
+    width: 100px;
+    height: 165px;
+    position: relative;
+    margin: 0 20px;
+}
+
+.crew .face img {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    border: 1px solid black;
+    margin-left: -10px;/*because of padding*/
+    margin-top: -10px; /*Same as above*/
+    transition: opacity 0.4s;
+}
+
+.crew .face:hover img.pixel {
+    opacity: 0;
+}
+
+.crew hr {
+    width: 80px;
+}
+
+.crew span.comment {
+    margin-bottom: 10px;
+}
+
+.crew .face span {
+    display: block;
+    bottom: 0;
+    position: absolute;
+    text-align: center;
+    background: white;
+    width: 100%;
+}
+
+.crew .face span.info {
+    opacity: 0;
+}
+
+.crew .face:hover span.info {
+    opacity: 1;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.grey {
+    background-color: grey;
+    color: #ffffff;
+}
+.creds__field {
+    font-size: 10px;
+    line-height: 25px;
+    text-align: center;
+}
